@@ -21,7 +21,7 @@ This is the official project page for our paper:
 
 <p align="center">
 
-<img src='git/figures/architecture.png' width='500'/>
+<img src='git/figures/architecture.png' width='700'/>
 
 </p>
 
@@ -42,7 +42,7 @@ along with two validation sets to evaluate the performance of methods.
 
 <p align="center">
 
-<img src='git/figures/train_set.png' width='500'/>
+<img src='git/figures/train_set.png' width='600'/>
 
 </p>
 
@@ -51,7 +51,7 @@ along with two validation sets to evaluate the performance of methods.
 
 We train our model on a dataset of aligned shoe tread depth maps and clean shoeprints. For the dataset creation, we leverage shoe-tread images available from online retailers and predict their depth maps and prints as outlined by [ShoeRinsics](https://openaccess.thecvf.com/content/WACV2023/html/Shafique_Creating_a_Forensic_Database_of_Shoeprints_From_Online_Shoe-Tread_Photos_WACV_2023_paper.html). The diagram above presents some examples from our training set.
 Our training set contains 21,699 shoe instances from 4,932 different shoe models. 
-[Download](https://drive.google.com/drive/folders/1EHcAiaOv7ihXQT4xhzfUE3aXE9RIKRRJ?usp=sharing)
+[Download](https://drive.google.com/drive/folders/1G7YRSN08MnbYZQiFwY7Q8hj4mfAEEbkF?usp=sharing)
 
 
 #### Validation Sets
@@ -59,7 +59,7 @@ Our training set contains 21,699 shoe instances from 4,932 different shoe models
 
 <p align="center">
 
-<img src='git/figures/test_set.png' width='500'/>
+<img src='git/figures/test_set.png' width='600'/>
 
 </p>
 
@@ -71,42 +71,41 @@ To study the effectiveness of models, we introduce a large-scale reference datab
 
 1. <b>Ref-db</b>: 
 We introduce a reference database (ref-db) by extending train-set to include more shoe models. The added shoe models are used to study generalization to unseen shoe models. Ref-db contains a total of 56,847 shoe instances from 24,766 different shoe models. 
-[Download]()
+[Download](https://drive.google.com/drive/folders/13-81-bQBqpm1aVTJ-BkJ60Ne3Rx57twS?usp=sharing)
 
-2. 
-
-We create our validation sets by reprocessing existing datasets of real and simuated crime-scene shoeprints from [FID300](https://fid.dmi.unibas.ch/) and [ShoeCase](https://www.sciencedirect.com/science/article/pii/S2352340923006467), respectively. 
-We match shoeprints from the validation sets to ref-db and add labels connecting shoeprints in val-FID and val-ShoeCase to ref-db to enable quantitative analysis.
-Example clean and crime-scene prints from our validation sets are shown above.
-Download links: [ref-db](), [val-FID](), and [val-ShoeCase]().
-
-//////////////////////////////
-
-The details and download links of each dataset are as follows:
-
-
-4. <b>Real-FID-val</b>: This dataset contains 41 sets of shoe-tread images, shoeprints, and masks.
-
-Note that the shoeprints in this dataset come from the [FID300](https://fid.dmi.unibas.ch/) dataset 
-
-while the shoe-tread images are separately downloaded from online retailers 
-
-(i.e., these images are disjoint from those in the real-train set). 
-
-We find matched FID300 prints (used as the ground-truth) and the downloaded shoe-tread images,
-
-and align them manually. Real-FID-val contains 41 new, athletic shoe-tread images with 
-
-corresponding ground-truth shoeprints and masks to segment out the shoe-treads.
-
-[Download](https://drive.google.com/drive/folders/1feHRI1_wErloXhmDpbTiorUaOwS6J5IO?usp=share_link)
-
+2. <b>Val-FID</b>:
+We reprocess the widely used [FID300](https://fid.dmi.unibas.ch/) to create our primary
+validation set (val-FID). Val-FID contains real crime-scene shoeprints (FID-crime) 
+and a corresponding set of clean, fully visible lab impressions (FID-clean).
+Examples of these prints are shown above. The FID-crime prints are noisy
+and often only partially visible.
+To ensure alignment with ref-db, we preprocess FID-crime prints by placing the partial prints
+in the appropriate position on a shoe “outline” (shown in yellow in the diagram above), a common practice
+in shoeprint matching during crime investigations.
+Val-FID contains 106 crime-scene shoeprints from 41 unique tread patterns, and these 
+We manually found matches to 41 FID-clean prints in ref-db by visual inspection. 
+These are all unique tread patterns and correspond to 106 FID-crime
+prints. Given that multiple shoe models in ref-db can share the same tread pattern, 
+we store a list of target labels for each shoeprint in FID-crime. These labels
+correspond to 1,152 shoe models and 2,770 shoe instances in ref-db.
+[Download](https://drive.google.com/drive/folders/1gBm4RPpGezz9FFeNkuT1gncqaKpIBCUQ?usp=sharing)
+ 
+3. <b>Val-ShoeCase</b>:
+We introduce a second validation set (val-ShoeCase) by
+reprocessing [ShoeCase](https://www.sciencedirect.com/science/article/pii/S2352340923006467) which consists of simulated crime-scene shoeprints
+made by blood (ShoeCase-blood) or dust (ShoeCase-dust) as shown in the figure above.
+These impressions are created by stepping on blood spatter or graphite powder
+and then walking on the floor. The prints in this dataset are full-sized, and we
+manually align them to match ref-db.
+ShoeCase uses two shoe models (Adidas Seeley and Nike Zoom Winflow 4),
+both of which are included in ref-db. The ground-truth labels we prepare for val-ShoeCase 
+include all shoe models in ref-db with visually similar tread patterns
+as these two shoe models since we do not penalize models for retrieving shoes
+with matching tread patterns but different shoe models. Val-ShoeCase labels
+correspond to 16 shoe models and 52 shoe instances in ref-db.
+[Download](https://drive.google.com/drive/folders/1nsBTdXrU4oeCsVYNUACtFJ_8PTKyTRx0?usp=sharing)
 
 You can view and download all the datasets together [here](https://drive.google.com/drive/folders/1I2EW2rSv9sr4YPCM1UQAkmuF_QzMs4pM?usp=sharing).
-
-
-
-
 
 ### Reference
 
