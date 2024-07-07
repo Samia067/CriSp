@@ -4,7 +4,7 @@ This is the official project page for our paper:
 
 [CriSp: Leveraging Tread Depth Maps for Enhanced Crime-Scene Shoeprint Matching](https://arxiv.org/abs/2404.16972)
 
-[Samia Shafique](https://sites.google.com/site/samiashafique067/), [Shu Kong*](http://www.cs.cmu.edu/~shuk/), and [Charless Fowlkes*](https://www.ics.uci.edu/~fowlkes/)
+[Samia Shafique](https://sites.google.com/site/samiashafique067/), [Shu Kong*](https://aimerykong.github.io), and [Charless Fowlkes*](https://www.ics.uci.edu/~fowlkes/)
 
 [ECCV 2024](https://eccv.ecva.net/Conferences/2024)
 
@@ -116,7 +116,7 @@ If you find our work useful in your research, please consider citing our paper:
 @article{shafique2024crisp,
   title={CriSp: Leveraging Tread Depth Maps for Enhanced Crime-Scene Shoeprint Matching},
   author={Shafique, Samia and Kong, Shu and Fowlkes, Charless},
-  journal={arXiv preprint arXiv:2404.16972},
+  booktitle={European Conference on Computer Vision},
   year={2024}
 }
 
