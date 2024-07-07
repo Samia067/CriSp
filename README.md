@@ -8,6 +8,18 @@ This is the official project page for our paper:
 
 [ECCV 2024](https://eccv.ecva.net/Conferences/2024)
 
+[project page](https://github.com/Samia067/CriSp),
+[pdf](https://arxiv.org/abs/2404.16972),
+[dataset](https://github.com/Samia067/CriSp?tab=readme-ov-file#datasets)
+
+[//]: # ([code]&#40;https://github.com/Samia067/ShoeRinsics#pretrained-models&#41;,)
+
+[//]: # ([poster]&#40;https://drive.google.com/file/d/1FyuQ3vByLn3IzBZhpyjpzSt1T8OHWurn/view?usp=sharing&#41;, )
+
+[//]: # ([slides]&#40;&#41;)
+
+[//]: # ([video]&#40;https://drive.google.com/file/d/1OFT2q2-vF2rKRRA0xZjka_YpjwVmolWX/view?usp=sharing&#41;)
+
 ### Abstract
 <p align="justify">
     Shoeprints are a common type of evidence found at crime scenes and are used regularly in forensic investigations. However, existing methods cannot effectively employ deep learning techniques to match noisy and occluded crime-scene shoeprints to a shoe database due to a lack of training data. Moreover, all existing methods match crime-scene shoeprints to clean reference prints, yet our analysis shows matching to more informative tread depth maps yields better retrieval results. The matching task is further complicated by the necessity to identify similarities only in corresponding regions (heels, toes, etc) of prints and shoe treads. To overcome these challenges, we leverage shoe tread images from online retailers and utilize an off-the-shelf predictor to estimate depth maps and clean prints. Our method, named CriSp, matches crime-scene shoeprints to tread depth maps by training on this data. CriSp incorporates data augmentation to simulate crime-scene shoeprints, an encoder to learn spatially-aware features, and a masking module to ensure only visible regions of crime-scene prints affect retrieval results. To validate our approach, we introduce two validation sets by reprocessing existing datasets of crime-scene shoeprints and establish a benchmarking protocol for comparison. On this benchmark, CriSp significantly outperforms state-of-the-art methods in both automated shoeprint matching and image retrieval tailored to this task. 
