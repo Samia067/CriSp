@@ -125,7 +125,7 @@ If you find our work useful in your research, please consider citing our paper:
 
 ```
 
-@article{shafique2024crisp,
+@inproceedings{shafique2024crisp,
   title={CriSp: Leveraging Tread Depth Maps for Enhanced Crime-Scene Shoeprint Matching},
   author={Shafique, Samia and Kong, Shu and Fowlkes, Charless},
   booktitle={European Conference on Computer Vision},
