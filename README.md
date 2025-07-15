@@ -54,7 +54,7 @@ along with two validation sets to evaluate the performance of methods.
 
 <p align="center">
 
-<img src='git/figures/train_set.png' width='600'/>
+<img src='figures/train_set.png' width='600'/>
 
 </p>
 
@@ -71,7 +71,7 @@ Our training set contains 21,699 shoe instances from 4,932 different shoe models
 
 <p align="center">
 
-<img src='git/figures/test_set.png' width='600'/>
+<img src='figures/test_set.png' width='600'/>
 
 </p>
 
