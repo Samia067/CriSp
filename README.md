@@ -33,7 +33,7 @@ This is the official project page for our paper:
 
 <p align="center">
 
-<img src='git/figures/architecture.png' width='700'/>
+<img src='figures/architecture.png' width='700'/>
 
 </p>
 
@@ -118,6 +118,27 @@ correspond to 16 shoe models and 52 shoe instances in ref-db.
 [Download](https://drive.google.com/drive/folders/1nsBTdXrU4oeCsVYNUACtFJ_8PTKyTRx0?usp=sharing)
 
 You can view and download all the datasets together [here](https://drive.google.com/drive/folders/1I2EW2rSv9sr4YPCM1UQAkmuF_QzMs4pM?usp=sharing).
+
+### Pretrained model
+
+Our pretrained model can be downloaded [here](crisp_model.pth)
+
+### Testing
+Use the following command to generate predictions using our pretrained model:
+```
+python3 codes/inference.py --weights_init=crisp_model.pth   --database_dir=ref-db  --output=output  --saved_val_features=db_features.pth  --num_workers=10
+```
+Note that weights_init should specify the path to the pretrained model, database_dir should point to the reference database, 
+and saved_val_features should point to any saved ref-db features. 
+Dataroot should specify the path to the root directory which holds all datasets used. 
+Database_dir should name the directory for the reference database, 
+and query_dir_FID and query_dir_ShoeCase should name the FID and ShoeCase query datasets respectively.
+
+Note that you can choose to recompute features for the reference database. 
+However, we have enhanced some of the database images since publication of this paper and so 
+the computed features would show slightly different results from those listed on the paper. 
+To reproduce the results from the paper, please use the precomputed features from the previous version of 
+our reference database available [here](db_features.pth). 
 
 ### Reference
 

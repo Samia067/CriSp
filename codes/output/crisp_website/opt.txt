@@ -1,0 +1,20 @@
+------------ Options -------------
+batch: 4
+crime_scene_test_freq: 1
+data: paired
+database_dir: ref-db
+dataroot: /home/sshafiqu/Research/Shoeprint/dataset/crisp
+feature_dim: (1, 1)
+gpu: 0
+input: ['depth']
+input2: ['print']
+load_model_name: crisp_model.pth
+num_workers: 10
+output: output/crisp_website
+query_dir_FID: val_FID
+query_dir_ShoeCase: val_ShoeCase
+save_all_matches: False
+saved_val_features: db_features.pth
+seed: 31934
+weights_init: 
+-------------- End ----------------

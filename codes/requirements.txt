@@ -1,0 +1,14 @@
+cudatoolkit==10.2.89
+pytorch==1.7.0
+torchvision==0.14.1
+scikit-image==0.19.2
+scipy==1.7.3
+numpy==1.21.2
+matplotlib==3.5.1
+opencv==3.4.2
+scikit-learn==1.0.2
+tensorboardx==2.0
+neptune-client==0.15.2
+psutil==5.8.0
+click==8.0.4
+tqdm==4.63.1
