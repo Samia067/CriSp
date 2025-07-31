@@ -121,7 +121,7 @@ You can view and download all the datasets together [here](https://drive.google.
 
 ### Pretrained model
 
-Our pretrained model can be downloaded [here](crisp_model.pth)
+Our pretrained model can be downloaded [here](https://drive.google.com/file/d/1oDzBNMD9BfYGgLpy_F_KjScBcii_LreF/view?usp=sharing)
 
 ### Testing
 Use the following command to generate predictions using our pretrained model:
@@ -138,7 +138,7 @@ Note that you can choose to recompute features for the reference database.
 However, we have enhanced some of the database images since publication of this paper and so 
 the computed features would show slightly different results from those listed on the paper. 
 To reproduce the results from the paper, please use the precomputed features from the previous version of 
-our reference database available [here](db_features.pth). 
+our reference database available [here](https://drive.google.com/file/d/1De4_wOi_X-Ve2gkzIGcrfxLU8ADcrswc/view?usp=sharing). 
 
 ### Reference
 
