@@ -126,7 +126,7 @@ Our pretrained model can be downloaded [here](https://drive.google.com/file/d/1o
 ### Testing
 Use the following command to generate predictions using our pretrained model:
 ```
-python3 codes/inference.py --weights_init=crisp_model.pth   --database_dir=ref-db  --output=output  --saved_val_features=db_features.pth  --num_workers=10
+python3 codes/inference.py --weights_init=model.pth   --database_dir=ref-db  --output=output  --saved_val_features=db_features.pth  --num_workers=10
 ```
 Note that weights_init should specify the path to the pretrained model, database_dir should point to the reference database, 
 and saved_val_features should point to any saved ref-db features. 
