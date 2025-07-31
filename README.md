@@ -63,7 +63,7 @@ along with two validation sets to evaluate the performance of methods.
 
 We train our model on a dataset of aligned shoe tread depth maps and clean shoeprints. For the dataset creation, we leverage shoe-tread images available from online retailers and predict their depth maps and prints as outlined by [ShoeRinsics](https://openaccess.thecvf.com/content/WACV2023/html/Shafique_Creating_a_Forensic_Database_of_Shoeprints_From_Online_Shoe-Tread_Photos_WACV_2023_paper.html). The diagram above presents some examples from our training set.
 Our training set contains 21,699 shoe instances from 4,932 different shoe models. 
-[Download](https://drive.google.com/drive/folders/1G7YRSN08MnbYZQiFwY7Q8hj4mfAEEbkF?usp=sharing)
+[Download](https://drive.google.com/file/d/1adWaS6vlVyv66fPn7ekH0V41zBamlvti/view?usp=sharing)
 
 
 #### Validation Sets
@@ -83,7 +83,7 @@ To study the effectiveness of models, we introduce a large-scale reference datab
 
 1. <b>Ref-db</b>: 
 We introduce a reference database (ref-db) by extending train-set to include more shoe models. The added shoe models are used to study generalization to unseen shoe models. Ref-db contains a total of 56,847 shoe instances from 24,766 different shoe models. 
-[Download](https://drive.google.com/drive/folders/13-81-bQBqpm1aVTJ-BkJ60Ne3Rx57twS?usp=sharing)
+[Download](https://drive.google.com/file/d/1YXvZVo_dnzag-BmQH1I8djzkESkgrHKg/view?usp=drive_link)
 
 2. <b>Val-FID</b>:
 We reprocess the widely used [FID300](https://fid.dmi.unibas.ch/) to create our primary
@@ -100,7 +100,7 @@ These are all unique tread patterns and correspond to 106 FID-crime
 prints. Given that multiple shoe models in ref-db can share the same tread pattern, 
 we store a list of target labels for each shoeprint in FID-crime. These labels
 correspond to 1,152 shoe models and 2,770 shoe instances in ref-db.
-[Download](https://drive.google.com/drive/folders/1gBm4RPpGezz9FFeNkuT1gncqaKpIBCUQ?usp=sharing)
+[Download](https://drive.google.com/file/d/1D21eyseOxvOKq1VZ8EAn52U6ge3jYww3/view?usp=sharing)
  
 3. <b>Val-ShoeCase</b>:
 We introduce a second validation set (val-ShoeCase) by
@@ -115,9 +115,9 @@ include all shoe models in ref-db with visually similar tread patterns
 as these two shoe models since we do not penalize models for retrieving shoes
 with matching tread patterns but different shoe models. Val-ShoeCase labels
 correspond to 16 shoe models and 52 shoe instances in ref-db.
-[Download](https://drive.google.com/drive/folders/1nsBTdXrU4oeCsVYNUACtFJ_8PTKyTRx0?usp=sharing)
+[Download](https://drive.google.com/file/d/18UmBoHCE-5x1ups9XRir27GrugPPZIsd/view?usp=sharing)
 
-You can view and download all the datasets together [here](https://drive.google.com/drive/folders/1I2EW2rSv9sr4YPCM1UQAkmuF_QzMs4pM?usp=sharing).
+You can view and download all the datasets together [here](https://drive.google.com/drive/folders/1yGqXICuUVeQ0B8dUpWhEOcqiHMaot7jN?usp=sharing).
 
 ### Pretrained model
 
